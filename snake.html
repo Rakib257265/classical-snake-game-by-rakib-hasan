@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Snake Pro</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">
+            <div class="score-box">
+                <span class="label">CURRENT</span>
+                <span id="currentScore">000</span>
+            </div>
+            <div class="score-box">
+                <span class="label">HIGHEST</span>
+                <span id="highScore">000</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div id="gameOverScreen" class="hidden">
+                <h1>GAME OVER</h1>
+                <button onclick="resetGame()">RETRY</button>
+            </div>
+        </div>
+
+        <div class="controls-wrapper">
+            <div class="main-controls">
+                <button id="startBtn" class="action-btn">START</button>
+            </div>
+            
+            <div class="d-pad">
+                <button class="dir-btn up" id="upBtn">▲</button>
+                <div class="middle-row">
+                    <button class="dir-btn left" id="leftBtn">◀</button>
+                    <button class="dir-btn down" id="downBtn">▼</button>
+                    <button class="dir-btn right" id="rightBtn">▶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+}
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.score-box {
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border-bottom: 4px solid #444;
+    min-width: 100px;
+}
+
+.score-box .label {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+#currentScore, #highScore {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+/* Canvas Area */
+.canvas-wrapper {
+    position: relative;
+    border: 5px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+canvas {
+    background-color: black;
+    display: block;
+}
+
+/* Game Over Overlay */
+#gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 2px solid #ff4444;
+    text-align: center;
+    z-index: 10;
+}
+
+#gameOverScreen h1 {
+    color: #ff4444;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.hidden { display: none; }
+
+/* Buttons */
+.controls-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 10px 30px;
+    font-weight: bold;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.d-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-row {
+    display: flex;
+    gap: 10px;
+}
+
+.dir-btn {
+    width: 60px;
+    height: 50px;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dir-btn:active { background: #777; }
